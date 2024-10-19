@@ -53,7 +53,7 @@ class Pessoa(models.Model):
     cpf = models.CharField(max_length = 45, unique= True, primary_key=True)
     nome = models.CharField(max_length = 45)
     cargo = models.CharField(max_length = 45)
-    email = models.CharField(max_length = 45)
+    email = models.EmailField(max_length = 45)
     telefone = models.CharField(max_length = 45)
     setor_id = models.ForeignKey(Setor, related_name = 'pessoa_setor_id', on_delete= models.CASCADE) 
 
@@ -64,25 +64,3 @@ class Endereco(models.Model):
     bairro = models.CharField(max_length = 45)
     empresa_cnpj = models.ForeignKey(Empresa, related_name='endereco_empresa_cnpj', on_delete= models.CASCADE)
     pessoa_cpf = models.ForeignKey(Pessoa, related_name='endereco_pessoa_cpf', on_delete= models.CASCADE)
-
-
-# class Servidor(models.Model):
-#     name = models.CharField()
-#     class meta():
-#         abstract = True
-
-# class Backbone(Servidor):
-#     provedor = models.TextField()
-
-#     class Meta():
-#         verbose_name = 'backbone'
-#         verbose_name_plural = 'backbones'
-
-#     def __str__(self):
-#         return self.provedor
-
-# class Dns(Servidor):
-#     class Meta():
-#         verbose_name = 'dns'
-#         verbose_name_plural = 'dns'
-# Create your models here.
