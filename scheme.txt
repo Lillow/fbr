@@ -1,0 +1,26 @@
+fbr/
+│
+├──	.gitignore
+├──	db.sqlite3
+├── manage.py
+├── readme.md
+├── fbr/
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+└── backend/
+    ├── migrations/
+	│	├──	__init__.py
+	│	├── 0001_initial.py
+	│	├──	0002_area_cobertura_empresa_area_cobertura.py
+	│	├──	0003_alter_empresa_area_cobertura_empresa_cnpj_plano.py
+	│	├──	0004_setor_infraestrutura_servico.py
+    │   └── 0005_pessoa_endereco.py
+    ├── __init__.py
+    ├── admin.py
+    ├── apps.py
+    ├── models.py
+    ├── tests.py
+    └── views.py
